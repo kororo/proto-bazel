@@ -1,0 +1,10 @@
+startup --host_jvm_args="-Xmx2G"
+# Workaround for https://github.com/bazelbuild/bazel/issues/6473
+build --distinct_host_configuration=false
+# Produce Python self-contained executables following PEP 441 specification.
+build --build_python_zip
+# Output the test logs in case of failures.
+test --test_output=errors
+
+# build --aspects @mypy_integration//:mypy.bzl%mypy_aspect
+# build --output_groups=+mypy
