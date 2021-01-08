@@ -1,0 +1,4 @@
+aiobotocore==1.1.2
+boto3==1.14.4
+mypy==0.790
+pytest-mypy==0.6.2
